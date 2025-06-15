@@ -4,7 +4,7 @@ from scraping import fetch_posts
 from utils import load_existing_posts, save_posts, get_new_posts
 from email.utils import format_datetime
 
-url = 'https://example.livejournal.com/'  # TODO: заменить на реальный URL
+url = 'https://dekodeko.livejournal.com/'  # TODO: заменить на реальный URL
 feed_url = 'https://yourusername.github.io/feed.xml'
 
 all_fetched = fetch_posts(url)
@@ -16,7 +16,7 @@ if new_posts:
     updated = sorted(updated, key=lambda x: x['pubDate'], reverse=True)[:50]
 
     fg = FeedGenerator()
-    fg.title("LiveJournal Feed")
+    fg.title("dekodeko LiveJournal Feed")
     fg.link(href=feed_url, rel='self')
     fg.description("Автоматическая RSS-лента")
 
