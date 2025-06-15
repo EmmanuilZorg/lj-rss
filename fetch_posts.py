@@ -1,3 +1,7 @@
+﻿import requests
+from bs4 import BeautifulSoup
+from datetime import datetime
+
 def fetch_posts(url):
     r = requests.get(url)
     r.raise_for_status()
